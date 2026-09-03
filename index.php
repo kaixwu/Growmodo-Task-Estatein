@@ -5,11 +5,6 @@
  * @package Estatein
  */
 
-if (is_front_page() || is_home()) {
-    include(get_template_directory() . '/front-page.php');
-    return;
-}
-
 get_header();
 ?>
 

@@ -40,8 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (!mainNav.querySelector('.mobile-nav-contact')) {
+            const headerContactBtn = document.querySelector('.header-actions a.btn');
+            const contactHref = headerContactBtn ? headerContactBtn.getAttribute('href') : 'contact.html';
+
             const contactLink = document.createElement('a');
-            contactLink.href = 'contact.html';
+            contactLink.href = contactHref;
             contactLink.className = 'nav-link mobile-nav-contact';
             contactLink.textContent = 'Contact Us';
             mainNav.appendChild(contactLink);
