@@ -171,8 +171,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 6. Mobile Section Carousel / Slider (Properties, Testimonials, FAQ, etc.)
-    function setupMobileSliders() {
-        const footers = document.querySelectorAll('.section-footer-nav');
+    // 6. Section Carousel / Slider (Properties, Testimonials, FAQ, etc.)
+    function setupSectionSliders() {
+        const footers = document.querySelectorAll('.section-footer-nav, .faq-footer-controls');
 
         footers.forEach(nav => {
             let section = nav.closest('section') || nav.parentElement;
@@ -182,47 +183,57 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!grid) return;
 
             const cards = Array.from(grid.children);
-            const prevBtn = nav.querySelector('button[aria-label="Previous"]');
-            const nextBtn = nav.querySelector('button[aria-label="Next"]');
-            const infoText = nav.querySelector('.pagination-info');
+            const prevBtn = nav.querySelector('button[aria-label="Previous"], .prev-btn');
+            const nextBtn = nav.querySelector('button[aria-label="Next"], .next-btn');
+            const infoText = nav.querySelector('.pagination-info, .faq-page-info, span');
 
             if (!cards.length || !prevBtn || !nextBtn) return;
 
-            let currentIndex = 0;
-            const total = cards.length;
+            let currentPage = 0;
 
             function updateSlider() {
-                if (window.innerWidth <= 768) {
-                    cards.forEach((card, idx) => {
-                        if (idx === currentIndex) {
-                            card.style.display = 'flex';
+                const perPage = window.innerWidth <= 768 ? 1 : 3;
+                const totalPages = Math.max(1, Math.ceil(cards.length / perPage));
+
+                if (currentPage >= totalPages) currentPage = totalPages - 1;
+                if (currentPage < 0) currentPage = 0;
+
+                const startIdx = currentPage * perPage;
+                const endIdx = startIdx + perPage;
+
+                cards.forEach((card, idx) => {
+                    if (idx >= startIdx && idx < endIdx) {
+                        card.style.display = 'flex';
+                        if (window.innerWidth <= 768) {
                             card.style.width = '100%';
                         } else {
-                            card.style.display = 'none';
+                            card.style.width = '';
                         }
-                    });
-                    if (infoText) {
-                        const numStr = String(currentIndex + 1).padStart(2, '0');
-                        const totalStr = String(total).padStart(2, '0');
-                        infoText.textContent = `${numStr} of ${totalStr}`;
+                    } else {
+                        card.style.display = 'none';
                     }
-                } else {
-                    cards.forEach(card => {
-                        card.style.display = '';
-                        card.style.width = '';
-                    });
+                });
+
+                if (infoText) {
+                    const pageStr = String(currentPage + 1).padStart(2, '0');
+                    const totalStr = String(totalPages).padStart(2, '0');
+                    infoText.textContent = `${pageStr} of ${totalStr}`;
                 }
             }
 
             prevBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                currentIndex = (currentIndex - 1 + total) % total;
+                const perPage = window.innerWidth <= 768 ? 1 : 3;
+                const totalPages = Math.max(1, Math.ceil(cards.length / perPage));
+                currentPage = (currentPage - 1 + totalPages) % totalPages;
                 updateSlider();
             });
 
             nextBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                currentIndex = (currentIndex + 1) % total;
+                const perPage = window.innerWidth <= 768 ? 1 : 3;
+                const totalPages = Math.max(1, Math.ceil(cards.length / perPage));
+                currentPage = (currentPage + 1) % totalPages;
                 updateSlider();
             });
 
@@ -231,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    setupMobileSliders();
+    setupSectionSliders();
 
     // 7. Office Location Tabs Filter
     const officeFilterBtns = document.querySelectorAll('.office-filter-btn');
