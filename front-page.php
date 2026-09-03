@@ -169,17 +169,89 @@ get_header();
                 </div>
             </div>
         </article>
+
+        <!-- Property 4 -->
+        <article class="property-card">
+            <div class="property-image-container">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/property-1.webp" alt="Coastal Horizon Manor">
+                <span class="property-badge">Villa</span>
+            </div>
+            <div class="property-content">
+                <h3 class="property-title">Coastal Horizon Manor</h3>
+                <p class="property-description">Modern 5-bedroom luxury estate featuring private infinity pool, sunset deck, and direct beach access.</p>
+                <div class="property-features-row">
+                    <span class="feature-pill"><i class="fa-solid fa-bed"></i> 5-Bedroom</span>
+                    <span class="feature-pill"><i class="fa-solid fa-bath"></i> 4-Bathroom</span>
+                    <span class="feature-pill"><i class="fa-solid fa-ruler-combined"></i> 4,200 sqft</span>
+                </div>
+                <div class="property-footer">
+                    <div class="property-price-block">
+                        <span class="price-label">Price</span>
+                        <span class="price-val">$2,100,000</span>
+                    </div>
+                    <a href="<?php echo esc_url(home_url('/property-details')); ?>" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Property 5 -->
+        <article class="property-card">
+            <div class="property-image-container">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/property-2.webp" alt="Urban Heights Penthouse">
+                <span class="property-badge">Apartment</span>
+            </div>
+            <div class="property-content">
+                <h3 class="property-title">Urban Heights Penthouse</h3>
+                <p class="property-description">Contemporary glass penthouse with panoramic city views, private elevator, and rooftop lounge.</p>
+                <div class="property-features-row">
+                    <span class="feature-pill"><i class="fa-solid fa-bed"></i> 3-Bedroom</span>
+                    <span class="feature-pill"><i class="fa-solid fa-bath"></i> 3-Bathroom</span>
+                    <span class="feature-pill"><i class="fa-solid fa-ruler-combined"></i> 2,800 sqft</span>
+                </div>
+                <div class="property-footer">
+                    <div class="property-price-block">
+                        <span class="price-label">Price</span>
+                        <span class="price-val">$1,450,000</span>
+                    </div>
+                    <a href="<?php echo esc_url(home_url('/property-details')); ?>" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Property 6 -->
+        <article class="property-card">
+            <div class="property-image-container">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/property-3.webp" alt="Alpine Timber Chalet">
+                <span class="property-badge">Cottage</span>
+            </div>
+            <div class="property-content">
+                <h3 class="property-title">Alpine Timber Chalet</h3>
+                <p class="property-description">Secluded mountain retreat with heated stone floors, floor-to-ceiling glass, and forest views.</p>
+                <div class="property-features-row">
+                    <span class="feature-pill"><i class="fa-solid fa-bed"></i> 4-Bedroom</span>
+                    <span class="feature-pill"><i class="fa-solid fa-bath"></i> 3-Bathroom</span>
+                    <span class="feature-pill"><i class="fa-solid fa-ruler-combined"></i> 3,100 sqft</span>
+                </div>
+                <div class="property-footer">
+                    <div class="property-price-block">
+                        <span class="price-label">Price</span>
+                        <span class="price-val">$980,000</span>
+                    </div>
+                    <a href="<?php echo esc_url(home_url('/property-details')); ?>" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </article>
     </div>
 
     <!-- Section Footer Navigation -->
     <div class="section-footer-nav">
         <a href="<?php echo esc_url(home_url('/properties')); ?>" class="btn btn-secondary">View All Properties</a>
         <div class="pagination-controls-wrapper">
-            <button class="page-btn" aria-label="Previous"><i class="fa-solid fa-arrow-left"></i></button>
-            <span class="pagination-info">01 of 60</span>
-            <button class="page-btn" aria-label="Next"><i class="fa-solid fa-arrow-right"></i></button>
+            <button class="page-btn prev-btn" aria-label="Previous"><i class="fa-solid fa-arrow-left"></i></button>
+            <span class="pagination-info">01 of 02</span>
+            <button class="page-btn next-btn" aria-label="Next"><i class="fa-solid fa-arrow-right"></i></button>
         </div>
-    </div>
+    </div>    </div>
 </section>
 
 <!-- 4. What Our Clients Say (Testimonials) -->
