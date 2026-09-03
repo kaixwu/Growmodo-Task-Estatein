@@ -236,13 +236,25 @@
     overflow: hidden;
     border: 1px solid var(--border-color);
     background: var(--bg-card);
+    height: 520px;
 }
 
-.hero-image-wrapper img {
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 520px;
+    height: 100%;
     object-fit: cover;
     display: block;
+    opacity: 0;
+    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    z-index: 2;
 }
 
 .hero-badge-circle {

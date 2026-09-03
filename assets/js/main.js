@@ -244,6 +244,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setupSectionSliders();
 
+    // 6b. Automatic Hero Image Fade Slideshow (Elegant, No Buttons)
+    function setupHeroFadeSlideshow() {
+        const heroWrapper = document.querySelector('.hero-image-wrapper');
+        if (!heroWrapper) return;
+
+        const slides = heroWrapper.querySelectorAll('.hero-slide');
+        if (slides.length < 2) return;
+
+        let activeIndex = 0;
+
+        setInterval(() => {
+            slides[activeIndex].classList.remove('active');
+            activeIndex = (activeIndex + 1) % slides.length;
+            slides[activeIndex].classList.add('active');
+        }, 4000);
+    }
+
+    setupHeroFadeSlideshow();
+
     // 7. Office Location Tabs Filter
     const officeFilterBtns = document.querySelectorAll('.office-filter-btn');
     const officeCards = document.querySelectorAll('.office-card');

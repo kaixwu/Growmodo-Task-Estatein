@@ -37,7 +37,10 @@ get_header();
         </div>
 
         <div class="hero-image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-building.webp" alt="Luxury Skyscraper Architecture">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-building.webp" alt="Luxury Skyscraper Architecture" class="hero-slide active">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/property-1.webp" alt="Seaside Serenity Villa" class="hero-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/property-2.webp" alt="Metropolitan Haven" class="hero-slide">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/property-3.webp" alt="Rustic Retreat Cottage" class="hero-slide">
             <div class="hero-badge-circle" title="✨ Learn More ✨ Estatein">
                 <svg viewBox="0 0 100 100">
                     <path id="circlePath" fill="none" d="M 10, 50 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0"/>
