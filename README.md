@@ -1,4 +1,4 @@
-# Estatein Luxury Real Estate Platform - Technical & UI/UX Portfolio Case Study
+# Estatein Luxury Real Estate Platform - Technical & UI/UX Implementation
 
 ## Project Overview
 Estatein is a high-performance, responsive custom WordPress real estate platform built from Figma design specifications. The site delivers a luxury dark-mode visual aesthetic, fast page load speeds, and intuitive cross-device user experiences for buyers, investors, and site administrators.
