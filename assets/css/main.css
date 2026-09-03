@@ -3227,3 +3227,12 @@ textarea.form-control {
         justify-content: space-between !important;
     }
 }
+
+.faq-footer-controls,
+.faq-footer-row,
+.slider-controls-row {
+    border: none !important;
+    border-top: 1px solid var(--border-color) !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
