@@ -403,6 +403,8 @@
     overflow: hidden;
     margin-bottom: 20px;
     height: 240px;
+    min-height: 200px;
+    background: #262626;
 }
 
 .property-image-container img {
