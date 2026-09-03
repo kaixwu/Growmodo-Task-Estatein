@@ -21,9 +21,7 @@
     <div class="header-container">
         <!-- Brand Logo -->
         <a href="<?php echo esc_url(home_url('/')); ?>" class="site-brand">
-            <div class="brand-icon">
-                <i class="fa-solid fa-cube"></i>
-            </div>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/estatein-logo.png" alt="Estatein Logo" class="brand-logo-img">
             <span>Estatein</span>
         </a>
 
