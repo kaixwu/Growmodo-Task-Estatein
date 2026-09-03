@@ -10,6 +10,19 @@ if (!defined('ESTATEIN_VERSION')) {
 }
 
 /**
+ * Disable Server & Browser HTML Caching for Instant Mobile Updates
+ */
+function estatein_disable_caching_headers() {
+    if (!is_admin()) {
+        nocache_headers();
+        header("Cache-Control: no-cache, no-store, must-revalidate, max-age=0");
+        header("Pragma: no-cache");
+        header("Expires: 0");
+    }
+}
+add_action('send_headers', 'estatein_disable_caching_headers');
+
+/**
  * Theme Setup
  */
 function estatein_setup() {
