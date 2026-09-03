@@ -18,7 +18,7 @@
             <!-- Brand & Newsletter Column -->
             <div class="footer-brand-col">
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="site-brand">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/estatein-logo.png" alt="Estatein Logo" class="brand-logo-img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/estatein-logo.png" alt="Estatein Logo" class="brand-logo-img" style="height: 38px; width: auto; max-height: 38px;">
                     <span>Estatein</span>
                 </a>
 

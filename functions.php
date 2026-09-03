@@ -52,13 +52,13 @@ function estatein_scripts() {
     wp_enqueue_style('estatein-fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', array(), '6.4.0');
 
     // Main Theme Style
-    wp_enqueue_style('estatein-theme-style', get_stylesheet_uri(), array(), ESTATEIN_VERSION);
+    wp_enqueue_style('estatein-theme-style', get_stylesheet_uri(), array(), time());
 
     // Custom CSS
-    wp_enqueue_style('estatein-main-css', get_template_directory_uri() . '/assets/css/main.css', array('estatein-theme-style'), ESTATEIN_VERSION);
+    wp_enqueue_style('estatein-main-css', get_template_directory_uri() . '/assets/css/main.css', array('estatein-theme-style'), time());
 
     // Custom JS
-    wp_enqueue_script('estatein-main-js', get_template_directory_uri() . '/assets/js/main.js', array(), ESTATEIN_VERSION, true);
+    wp_enqueue_script('estatein-main-js', get_template_directory_uri() . '/assets/js/main.js', array(), time(), true);
 }
 add_action('wp_enqueue_scripts', 'estatein_scripts');
 
