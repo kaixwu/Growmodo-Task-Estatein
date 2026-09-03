@@ -313,17 +313,6 @@ get_header();
             </div>
         </div>
     </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="cta-box">
-            <div class="cta-content">
-                <h2>Start Your Real Estate Journey Today</h2>
-                <p>Your dream property is just a click away. Whether you're looking for a new home, a strategic investment, or expert real estate advice, Estatein is here to assist you every step of the way. Take the first step towards your real estate goals and explore our available properties or get in touch with our team for personalized assistance.</p>
-            </div>
-            <a href="<?php echo esc_url(home_url('/properties')); ?>" class="btn btn-primary">Explore Properties</a>
-        </div>
-    </section>
 </main>
 
 <?php get_footer(); ?>
