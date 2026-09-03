@@ -2668,6 +2668,9 @@ textarea.form-control {
     .hero-image-wrapper {
         order: 1;
         margin-bottom: 24px;
+        height: 320px !important;
+        width: 100% !important;
+        position: relative !important;
     }
 
     .hero-content {
