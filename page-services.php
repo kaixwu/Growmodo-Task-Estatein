@@ -27,26 +27,28 @@ get_header();
         </div>
 
         <div class="feature-card">
-            <div class="feature-icon"><i class="fa-solid fa-building-user"></i></div>
-            <a href="#management" class="feature-arrow"><i class="fa-solid fa-arrow-down"></i></a>
+            <div class="feature-card-header">
+                <div class="feature-icon"><i class="fa-solid fa-building-user"></i></div>
+                <a href="#management" class="feature-arrow"><i class="fa-solid fa-arrow-down"></i></a>
+            </div>
+            <h3 class="feature-title">Property Management</h3>
         </div>
-        <h3 class="feature-title">Property Management</h3>
-    </div>
 
-    <div class="feature-card">
-        <div class="feature-card-header">
-            <div class="feature-icon"><i class="fa-solid fa-chart-pie"></i></div>
-            <a href="#investments" class="feature-arrow"><i class="fa-solid fa-arrow-down"></i></a>
+        <div class="feature-card">
+            <div class="feature-card-header">
+                <div class="feature-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                <a href="#investments" class="feature-arrow"><i class="fa-solid fa-arrow-down"></i></a>
+            </div>
+            <h3 class="feature-title">Smart Investments</h3>
         </div>
-        <h3 class="feature-title">Smart Investments</h3>
-    </div>
 
-    <div class="feature-card">
-        <div class="feature-card-header">
-            <div class="feature-icon"><i class="fa-solid fa-scale-balanced"></i></div>
-            <a href="#advisory" class="feature-arrow"><i class="fa-solid fa-arrow-down"></i></a>
+        <div class="feature-card">
+            <div class="feature-card-header">
+                <div class="feature-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                <a href="#advisory" class="feature-arrow"><i class="fa-solid fa-arrow-down"></i></a>
+            </div>
+            <h3 class="feature-title">Legal &amp; Advisory</h3>
         </div>
-        <h3 class="feature-title">Legal &amp; Advisory</h3>
     </div>
 
     <!-- 2. Unlock Property Value -->
