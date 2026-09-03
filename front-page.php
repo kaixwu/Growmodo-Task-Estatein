@@ -37,7 +37,7 @@ get_header();
         </div>
 
         <div class="hero-image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-building.png" alt="Luxury Skyscraper Architecture">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-building.webp" alt="Luxury Skyscraper Architecture">
             <div class="hero-badge-circle" title="✨ Learn More ✨ Estatein">
                 <svg viewBox="0 0 100 100">
                     <path id="circlePath" fill="none" d="M 10, 50 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0"/>
@@ -101,7 +101,7 @@ get_header();
         <!-- Property 1 -->
         <article class="property-card">
             <div class="property-image-container">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/property-1.png" alt="Seaside Serenity Villa">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/property-1.webp" alt="Seaside Serenity Villa">
                 <span class="property-badge">Villa</span>
             </div>
             <div class="property-content">
@@ -125,7 +125,7 @@ get_header();
         <!-- Property 2 -->
         <article class="property-card">
             <div class="property-image-container">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/property-2.png" alt="Metropolitan Haven">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/property-2.webp" alt="Metropolitan Haven">
                 <span class="property-badge">Apartment</span>
             </div>
             <div class="property-content">
@@ -149,7 +149,7 @@ get_header();
         <!-- Property 3 -->
         <article class="property-card">
             <div class="property-image-container">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/property-3.png" alt="Rustic Retreat Cottage">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/property-3.webp" alt="Rustic Retreat Cottage">
                 <span class="property-badge">Cottage</span>
             </div>
             <div class="property-content">

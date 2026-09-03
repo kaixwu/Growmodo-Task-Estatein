@@ -95,7 +95,7 @@ get_header();
         <!-- Property 1 -->
         <article class="property-card">
             <div class="property-image-container">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/property-1.png" alt="Seaside Serenity Villa">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/property-1.webp" alt="Seaside Serenity Villa">
                 <span class="property-badge">Villa</span>
             </div>
             <div class="property-content">
@@ -119,7 +119,7 @@ get_header();
         <!-- Property 2 -->
         <article class="property-card">
             <div class="property-image-container">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/property-2.png" alt="Metropolitan Haven">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/property-2.webp" alt="Metropolitan Haven">
                 <span class="property-badge">Apartment</span>
             </div>
             <div class="property-content">
@@ -143,7 +143,7 @@ get_header();
         <!-- Property 3 -->
         <article class="property-card">
             <div class="property-image-container">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/property-3.png" alt="Rustic Retreat Cottage">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/property-3.webp" alt="Rustic Retreat Cottage">
                 <span class="property-badge">Cottage</span>
             </div>
             <div class="property-content">
