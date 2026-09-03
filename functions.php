@@ -148,3 +148,30 @@ function estatein_get_property_meta($post_id = null) {
 
     return compact('price', 'bedrooms', 'bathrooms', 'sqft', 'location', 'badge');
 }
+
+/**
+ * AJAX Contact & Inquiry Form Handler (Sends email via wp_mail to Site Admin)
+ */
+function estatein_handle_contact_inquiry() {
+    $first_name = isset($_POST['first_name']) ? sanitize_text_field($_POST['first_name']) : '';
+    $last_name  = isset($_POST['last_name']) ? sanitize_text_field($_POST['last_name']) : '';
+    $email      = isset($_POST['email']) ? sanitize_email($_POST['email']) : '';
+    $phone      = isset($_POST['phone']) ? sanitize_text_field($_POST['phone']) : '';
+    $property   = isset($_POST['property']) ? sanitize_text_field($_POST['property']) : '';
+    $message    = isset($_POST['message']) ? sanitize_textarea_field($_POST['message']) : '';
+
+    $to = get_option('admin_email'); // Sends directly to Site Admin Email
+    $subject = 'New Estatein Inquiry from ' . $first_name . ' ' . $last_name;
+    $body = "Name: $first_name $last_name\nEmail: $email\nPhone: $phone\nProperty: $property\n\nMessage:\n$message";
+    $headers = array('Content-Type: text/plain; charset=UTF-8', 'From: ' . $first_name . ' <' . $email . '>');
+
+    $sent = wp_mail($to, $subject, $body, $headers);
+
+    if ($sent) {
+        wp_send_json_success(array('message' => 'Thank you! Your message has been sent to ' . $to));
+    } else {
+        wp_send_json_error(array('message' => 'Failed to send email. Please check server SMTP configuration.'));
+    }
+}
+add_action('wp_ajax_estatein_inquiry', 'estatein_handle_contact_inquiry');
+add_action('wp_ajax_nopriv_estatein_inquiry', 'estatein_handle_contact_inquiry');
